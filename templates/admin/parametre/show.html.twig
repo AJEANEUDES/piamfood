@@ -1,0 +1,155 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Parametre{% endblock %}
+
+{% block body %}
+
+  <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1>Blank Page</h1>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active">Blank Page</li>
+                        </ol>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+
+            <!-- Default box -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Title</h3>
+
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                            <i class="fas fa-minus"></i></button>
+                        <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+                            <i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="card-body">
+
+    <h1>Parametre</h1>
+
+    <table class="table table-striped projects">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ parametre.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ parametre.titre }}</td>
+            </tr>
+            <tr>
+                <th>Motscles</th>
+                <td>{{ parametre.motscles }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ parametre.description }}</td>
+            </tr>
+            <tr>
+                <th>Entreprise</th>
+                <td>{{ parametre.entreprise }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ parametre.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ parametre.telephone }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ parametre.email }}</td>
+            </tr>
+            <tr>
+                <th>Smtpserver</th>
+                <td>{{ parametre.smtpserver }}</td>
+            </tr>
+            <tr>
+                <th>Smtpemail</th>
+                <td>{{ parametre.smtpemail }}</td>
+            </tr>
+            <tr>
+                <th>Smtppassword</th>
+                <td>{{ parametre.smtppassword }}</td>
+            </tr>
+            <tr>
+                <th>Smtpport</th>
+                <td>{{ parametre.smtpport }}</td>
+            </tr>
+            <tr>
+                <th>Facebook</th>
+                <td>{{ parametre.facebook }}</td>
+            </tr>
+            <tr>
+                <th>Instagram</th>
+                <td>{{ parametre.instagram }}</td>
+            </tr>
+            <tr>
+                <th>Whatsapp</th>
+                <td>{{ parametre.whatsapp }}</td>
+            </tr>
+            <tr>
+                <th>Apropos</th>
+                <td>{{ parametre.apropos }}</td>
+            </tr>
+            <tr>
+                <th>Contact</th>
+                <td>{{ parametre.contact }}</td>
+            </tr>
+            <tr>
+                <th>Reference</th>
+                <td>{{ parametre.reference }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ parametre.status }}</td>
+            </tr>
+        </tbody>
+    </table>
+</br>
+     <div class="row">
+        <div class="col-md-2">
+
+        <a href="{{ path('parametre_index') }}" class="btn btn-block btn-info">Revenir Sur la Liste</a>
+       </div>
+
+    <div class="col-md-2">  
+        <a href="{{ path('parametre_edit', {'id': parametre.id}) }}" class="btn btn-block btn-success"><i class="fas fa-pencil-alt"></i></a>
+    </div>
+
+     <div class="col-md-2">
+    {{ include('admin/parametre/_delete_form.html.twig') }}
+     </div>
+ </div>
+ </br>
+ 
+     <!-- /.card-body -->
+                <div class="card-footer">
+                    
+                </div>
+                <!-- /.card-footer-->
+            </div>
+            <!-- /.card -->
+
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+{% endblock %}

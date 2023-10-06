@@ -1,0 +1,239 @@
+
+
+{% extends 'homebase.html.twig' %}
+
+{% block title %}A PROPOS DE NOUS-- {{parametre[0].titre}}{% endblock %}
+{% block motscles %}{{parametre[0].motscles}}{% endblock %}
+{% block description %}{{parametre[0].description}} {% endblock %}
+
+
+{% block body %}
+
+
+            <div class="container-xxl py-5 bg-dark hero-header mb-5">
+                <div class="container text-center my-5 pt-5 pb-4">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">A Propos de Nous</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item"><a href="/">Acceuil</a></li>
+                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">A Propos</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                           <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img/logopiamfood.jpg">
+                            </div>  
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="img/about-1.jpg">
+                            </div>
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="img/about-2.jpg" style="margin-top: 25%;">
+                            </div>
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="img/about-3.jpg">
+                            </div>
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="img/about-4.jpg">
+                            </div>                         
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h5 class="section-title ff-secondary text-start text-primary fw-normal">A Propos de Nous</h5>
+                        <h1 class="mb-4">Bienvenue(s) à <i >PIAMFOOD</i></h1>
+                                 
+                                <div class="section-title section-default-two">
+                                    <h2 class="title-main">PIAMFOOD</h2>
+                                         
+                            {#< <p class="mb-4">
+                                   PIAMFOOD est un restaurant basé à Lomé, proposant des pizzas, 
+                                   des burgers, des crèmes, des boissons et des plats locaux offerts dans un cadre convivial.
+                               
+                            </p>#}
+                                    
+                            <p class="mb-4">
+                                 <div class="story-content">    
+                                     <p class="mb-4">
+                                         {{ parametre[0].apropos |raw }}
+                                     </p>
+                        {#<p class="mb-4">
+                        Alors en possession de <strong>deux atouts majeurs</strong> à savoir : une «&nbsp;compétence culinaire affinée&nbsp;» et 
+                        une «&nbsp;approche innovante&nbsp;» de la restauration, nous étions soucieux d’agrémenter les petits bonheurs du
+                         quotidien de toutes ces personnes qui formaient notre entourage.
+                          <p>
+                          Ainsi, PIAMF0OD a pu ouvrir ses portes aux rires d’enfants, 
+                         aux familles réunies, aux amoureux; bref, à tous ceux qui célèbrent la vie ! 
+                         </p>
+                         <p class="mb-4">
+                         Nous vous ouvrons nos Portes en Décembre, 
+                         afin de découvrir notre cuisine authentique et respectueuse du bien-être. 
+                         Nous ne pouvons débuter ce voyage, ni cette histoire fascinanate sans vous. Nous lançons nos premières franchises ici au Togo, 
+                         car c'est <strong>près</strong> de vous que ça commence.
+                     </p>#}
+
+                     </div>
+
+                        <div class="row g-4 mb-4">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center border-start border-5 border-primary px-3">
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">3</h1>
+                                    <div class="ps-4">
+                                        <p class="mb-0">Années d'</p>
+                                        <h6 class="text-uppercase mb-0">Expérience</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center border-start border-5 border-primary px-3">
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">10</h1>
+                                    <div class="ps-4">
+                                        <p class="mb-0">Populaires</p>
+                                        <h6 class="text-uppercase mb-0">Maitres Chefs</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {#<a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>#}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Team Start -->
+        <div class="container-xxl pt-5 pb-3">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Membres de l'Equipe</h5>
+                    <h1 class="mb-5">Nos Maitres Chefs</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item text-center rounded overflow-hidden">
+                            <div class="rounded-circle overflow-hidden m-4">
+                                <img class="img-fluid" src="img/logopiamfood.jpg" alt="">
+                            </div>
+                            <h5 class="mb-0">John Doe</h5>
+                            <small>Maitre Cuisinier</small>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item text-center rounded overflow-hidden">
+                            <div class="rounded-circle overflow-hidden m-4">
+                                <img class="img-fluid" src="img/logopiamfood.jpg" alt="">
+                            </div>
+                            <h5 class="mb-0">Jack Doe</h5>
+                            <small>Cuisinier</small>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="team-item text-center rounded overflow-hidden">
+                            <div class="rounded-circle overflow-hidden m-4">
+                                <img class="img-fluid" src="img/logopiamfood.jpg" alt="">
+                            </div>
+                            <h5 class="mb-0">Joseph</h5>
+                            <small>Designation</small>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="team-item text-center rounded overflow-hidden">
+                            <div class="rounded-circle overflow-hidden m-4">
+                                <img class="img-fluid" src="img/logopiamfood.jpg" alt="">
+                            </div>
+                            <h5 class="mb-0">Full Name</h5>
+                            <small>Designation</small>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+        
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-9">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">PIAMFOOD</h4>
+                        <a class="btn btn-link" href="">A Propos de Nous</a>
+                        <a class="btn btn-link" href="">Nous Contacer</a>
+                        <a class="btn btn-link" href="">Reserver une Table</a>
+                        <a class="btn btn-link" href="">Politique de Confidentialité</a>
+                        <a class="btn btn-link" href="">Terms & Conditions</a>
+                    </div>
+                    <div class="col-lg-3 col-md-9">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Rue, Lomé, Togo</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+228 12345678</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>piamfood@gmail.com.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-9">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Ouvertures</h4>
+                        <h5 class="text-light fw-normal">Lundi - Samedi</h5>
+                        <p>09H - 24HH</p>
+                        <h5 class="text-light fw-normal">Dimanche</h5>
+                        <p>10H - 24H</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="/">PIAMF0OD</a>, Tous Droits reservés. 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+		
+{% endblock %}

@@ -1,0 +1,137 @@
+
+{% extends 'homebase.html.twig' %}
+
+{% block title %} PIAMFOD -Témoignages {% endblock %}
+
+{% block body %}
+
+<div class="container-xxl py-5 bg-dark hero-header mb-5">
+                <div class="container text-center my-5 pt-5 pb-4">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Témoignages</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item"><a href="/">Acceuil</a></li>
+                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Témoignages</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- Testimonial Start -->
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="text-center">
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Témoignages</h5>
+                    <h1 class="mb-5">Ce Que Nos clients disent!!!</h1>
+                </div>
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>Nous adorons cet endroit</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/logo.jpg" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Piam Food</h5>
+                                <small>Professeur</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>Je kiffe le lieu </p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/logo.jpg" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Red Saimi</h5>
+                                <small>Vulganistaeur</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>PiamFood, la référence</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/logo.jpg" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Abalo</h5>
+                                <small>Policier</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>Il n'y a pas meilleur endroit que PiamFood</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/logo.jpg" style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">AKofa</h5>
+                                <small>Experte Comptable</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+        
+
+        
+
+       <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-9">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">PIAMFOOD</h4>
+                        <a class="btn btn-link" href="{{ path('apropos') }}">A Propos de Nous</a>
+                        <a class="btn btn-link" href="">Nous Contacer</a>
+                        <a class="btn btn-link" href="">Reserver une Table</a>
+                        <a class="btn btn-link" href="">Politique de Confidentialité</a>
+                        <a class="btn btn-link" href="">Terms & Conditions</a>
+                    </div>
+                    <div class="col-lg-3 col-md-9">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Rue, Lomé, Togo</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+228 12345678</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>piamfood@gmail.com.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-9">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Ouvertures</h4>
+                        <h5 class="text-light fw-normal">Lundi - Samedi</h5>
+                        <p>09H - 24HH</p>
+                        <h5 class="text-light fw-normal">Dimanche</h5>
+                        <p>10H - 24H</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="/">PIAMF0OD</a>, Tous Droits reservés. 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+		
+{% endblock %}

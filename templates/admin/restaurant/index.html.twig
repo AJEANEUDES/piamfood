@@ -1,0 +1,130 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Restaurant index{% endblock %}
+
+{% block body %}
+   
+    <SCRIPT language="JavaScript" type="text/javascript">
+        function openWin( windowURL, windowName, windowFeatures ) { window.open( windowURL, windowName, windowFeatures ) ; 	}
+    </SCRIPT>
+
+    
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <div class="col-md-4">
+                            <a href="{{ path('restaurant_new') }}" class="btn btn-block btn-success" ><i class="fas fa-plus"></i>Restaurant Info</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                            <li class="breadcrumb-item"><a href="/admin">Home</a></li>
+                            <li class="breadcrumb-item active">Restaurant List</li>
+                        </ol>
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+
+            <!-- Default box -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Restaurant List</h3>
+
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+                            <i class="fas fa-minus"></i></button>
+                        <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
+                            <i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+    <div class="card-body">
+
+
+    <table class="table table-striped projects">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Motscles</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Adresse</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Ville</th>
+                <th>Location</th>
+                <th>I. Galerie</th>
+                 <th>Status</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+        {% for restaurant in restaurants %}
+            <tr>
+                <td>{{ restaurant.id }}</td>
+                 <td nowrap>{{ restaurant.titre }}</td>
+                <td>{{ restaurant.motscles }}</td>
+                <td>{{ restaurant.description }}</td>
+                 <td>
+                   <img src="{{ asset('uploads/images/' ~ restaurant.image) }}" height="20">  
+                </td>
+               
+                <td>{{ restaurant.adresse }}</td>
+                <td>{{ restaurant.phone }}</td>
+                <td>{{ restaurant.email }}</td>
+                <td>{{ restaurant.Ville }}</td>
+                <td>{{ restaurant.location }}</td>
+                
+               
+                <td>
+                      <a href="javascript:openWin('{{ path('admin_image_new', {'id': restaurant.id}) }}','','toolbar=no,location=no,directories=0,status=no,top=50,left=100,menuBar=no,scrollBars=yes,resizable=no,width=900,height=600');">
+                         <img src="{{ asset('assets/admin/dist/img') }}/galerie.jpg" height="50" title="Image">
+                          </a>
+              </td>
+              
+                <td>{{ restaurant.status }}</td>
+
+                <td>
+                    <a href="{{ path('restaurant_show', {'id': restaurant.id}) }} " class="btn btn-block btn-info"><i class="fas fa-eye"></i></a>
+                </td>
+                <td>    
+                    <a href="{{ path('restaurant_edit', {'id': restaurant.id}) }}" class="btn btn-block btn-info"><i class="fas fa-pencil-alt"></i></a>
+                </td>
+                   <td>
+                        {{ include('admin/restaurant/_delete_form.html.twig') }}
+                     </td>
+
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="14">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+ </div>
+   
+                <!-- /.card-body -->
+                <div class="card-footer">
+                    
+                </div>
+                <!-- /.card-footer-->
+            </div>
+            <!-- /.card -->
+
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+
+{% endblock %}

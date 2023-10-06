@@ -1,0 +1,11 @@
+  <button class="btn btn-block btn-primary btn-lg">Créer un Nouvel Utilisateur</button>
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    <div class="col-md-2">
+    <button class="btn btn-block btn-primary">{{ button_label|default('Save') }}</button>
+    </div>
+    </br>
+{{ form_end(form) }}

@@ -1,0 +1,104 @@
+{% extends 'homebase.html.twig' %}
+
+{% block title %}{{ app.user.nom }} Profil{% endblock %}
+
+{% block body %}
+    
+
+    <section id="subintro">
+        <div class="container">
+            <div class="row g-8">
+                <div class="span8">
+                    <ul class="breadcrumb">
+                        <li><a href="#"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
+                        <li><a href="#">Blog</a><i class="icon-angle-right"></i></li>
+                        <li class="active">Blog with left sidebar</li>
+                    </ul>
+                </div>
+                <div class="span4">
+                    <div class="search">
+                        <form class="input-append">
+                            <input class="search-form" id="appendedPrependedInput" type="text" placeholder="Search here.." />
+                            <button class="btn btn-dark" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="maincontent">
+        <div class="container">
+            <div class="row g-8">
+
+
+      {{ include('user/usermenu.html.twig') }}
+
+           <div class="col-md-4">
+                    <!-- start article 1 -->
+                    <article class="blog-post">
+                        <div class="post-heading">
+                            <h3><a href="#">Informations Personnelles de l'Utilisateur</a></h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+  
+
+    <table class="table table-striped projects">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{app.user.id }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ app.user.email }}</td>
+            </tr>
+            <tr>
+                <th>Roles</th>
+                <td>{{ app.user.roles ? app.user.roles|json_encode : '' }}</td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>{{ app.user.password }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ app.user.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenoms</th>
+                <td>{{ app.user.prenoms }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ app.user.image }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ app.user.status }}</td>
+            </tr>
+            <tr>
+                <th>Created_at</th>
+                <td>{{ app.user.createdAt ? app.user.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Updated_at</th>
+                <td>{{ app.user.updatedAt ? app.user.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+      <a href="{{ path('user_edit', {'id': app.user.id}) }}" class="btn btn-block btn-success" style:{"color:orange;"}><i class="fas fa-pencil-alt"></i></a>
+
+                </div>
+              </div>
+              </article>
+                    <!-- end article 1 -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+{% endblock %}

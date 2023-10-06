@@ -1,0 +1,131 @@
+{% extends 'homebase.html.twig' %}
+
+{% block title %}{{ app.user.nom }} Profil{% endblock %}
+
+{% block body %}
+    <SCRIPT language="JavaScript" type="text/javascript">
+        function openWin( windowURL, windowName, windowFeatures ) { window.open( windowURL, windowName, windowFeatures ) ; 	}
+    </SCRIPT>
+    <!-- Subintro
+    ================================================== -->
+    <section id="subintro">
+        <div class="container">
+            <div class="row">
+                <div class="span8">
+                    <ul class="breadcrumb">
+                        <li><a href="#"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
+                        <li><a href="#">Blog</a><i class="icon-angle-right"></i></li>
+                        <li class="active">Blog with left sidebar</li>
+                    </ul>
+                </div>
+                <div class="span4">
+                    <div class="search">
+                        <form class="input-append">
+                            <input class="search-form" id="appendedPrependedInput" type="text" placeholder="Search here.." />
+                            <button class="btn btn-dark" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="maincontent">
+        <div class="container">
+            <div class="row">
+
+                {{ include('user/usermenu.html.twig') }}
+
+                <div class="col-md-4">
+                    <!-- start article 1 -->
+                    <article class="blog-post">
+                        <div class="post-heading">
+                            <h3><a href="#">User Restaurant Detail</a></h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+
+
+                                <table class="table table-striped projects">
+                                    <tbody>
+                                    <tr>
+                                        <th>Id</th>
+                                        <td>{{ restaurant.id }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Title</th>
+                                        <td>{{ restaurant.titre }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Keywords</th>
+                                        <td>{{ restaurant.motscles }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Description</th>
+                                        <td>{{ restaurant.description }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Image</th>
+                                        <td>{{ restaurant.image }}</td>
+                                    </tr>
+                                    <tr>
+                                        
+                                    <tr>
+                                        <th>Adresse</th>
+                                        <td>{{ restaurant.adresse }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Ville</th>
+                                        <td>{{ restaurant.ville }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Téléphone</th>
+                                        <td>{{ restaurant.phone }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Email</th>
+                                        <td>{{ restaurant.email }}</td>
+                                    </tr>
+                                    
+                                   
+                                    <tr>
+                                        <th>Location</th>
+                                        <td>{{ restaurant.location }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Status</th>
+                                        <td>{{ restaurant.status }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Created_at</th>
+                                        <td>{{ restaurant.createdAt ? restaurant.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Updated_at</th>
+                                        <td>{{ restaurant.updatedAt ? restaurant.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                                    </tr>
+                                   
+                                    <tr>
+                                        <th>Userid</th>
+                                        <td>{{ restaurant.userid }}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                                <a href="{{ path('user_restaurant_index') }}">Revenir sur la Liste</a>
+
+                                <a href="{{ path('user_restaurant_edit', {'id': restaurant.id}) }}">edit</a>
+
+                                {{ include('restaurant/_delete_form.html.twig') }}
+                            </div>
+                        </div>
+                    </article>
+                    <!-- end article 1 -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
+

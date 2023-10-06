@@ -1,0 +1,113 @@
+{% extends 'homebase.html.twig' %}
+
+{% block title %}{{ app.user.nom  }} Profil{% endblock %}
+
+{% block body %}
+    <SCRIPT language="JavaScript" type="text/javascript">
+        function openWin( windowURL, windowName, windowFeatures ) { window.open( windowURL, windowName, windowFeatures ) ; 	}
+    </SCRIPT>
+    <!-- Subintro
+================================================== -->
+    <section id="subintro">
+        <div class="container">
+            <div class="row">
+                <div class="span8">
+                    <ul class="breadcrumb">
+                        <li><a href="#"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
+                        <li><a href="/user">User</a><i class="icon-angle-right"></i></li>
+                        <li class="active">User Restaurant List</li>
+                    </ul>
+                </div>
+                <div class="span4">
+                    <div class="search">
+                        <form class="input-append">
+                            <input class="search-form" id="appendedPrependedInput" type="text" placeholder="Search here.." />
+                            <button class="btn btn-dark" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="maincontent">
+        <div class="container">
+            <div class="row">
+
+                {{ include('user/usermenu.html.twig') }}
+
+                <div class="col-md-4">
+                    <!-- start article 1 -->
+                    <article class="blog-post">
+                        <div class="post-heading">
+                            <h3><a href="#">User Restaurant List</a></h3>
+                            <a href="{{ path('user_restaurant_new') }}" class="btn btn-block btn-success" >Add New Restaurant</a>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+
+                                <table class="table table-striped projects">
+                                    <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Titre</th>
+                                        <th>Image</th>
+                                        
+
+                                        <th>Ville</th>
+                                        
+
+                                        <th>I.Galerie</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for restaurant in restaurants %}
+                                        <tr>
+                                            <td >{{ restaurant.id }}</td>
+                                            <td nowrap>{{ restaurant.titre }}</td>
+                                            <td>
+                                                <img src="{{ asset('uploads/images/' ~ restaurant.image) }}" style="height: 30px">  </td>
+                                            
+
+                                            <td>{{ restaurant.ville }}</td>
+                                             
+
+                                            <td>
+                                                <a href="javascript:openWin('{{ path('admin_image_new', {'id': restaurant.id}) }}','','toolbar=no,location=no,directories=0,status=no,top=50,left=100,menuBar=no,scrollBars=yes,resizable=no,width=900,height=600');">
+                                                    <img src="{{ asset('assets/admin/dist/img') }}/galerie.jpg" style="height: 30px">
+                                                </a>
+                                            </td>
+
+                                            <td>{{ restaurant.status }}</td>
+
+                                            <td>
+                                                <a href="{{ path('user_restaurant_show', {'id': restaurant.id}) }}" class="btn btn-theme">Show</a>
+                                            </td>
+                                            <td>
+                                                <a href="{{ path('user_restaurant_edit', {'id': restaurant.id}) }}" class="btn btn-success">Edit</a>
+                                            </td>
+                                            <td>
+                                                {{ include('restaurant/_delete_form.html.twig') }}
+                                            </td>
+                                        </tr>
+                                    {% else %}
+                                        <tr>
+                                            <td colspan="17">no records found</td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </article>
+                    <!-- end article 1 -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

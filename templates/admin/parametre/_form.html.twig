@@ -1,0 +1,12 @@
+  <button class="btn btn-block btn-primary btn-lg">Créer un Nouveau Parametre</button>
+
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    <div class="col-md-2">
+        <button class="btn btn-block btn-primary">{{ button_label|default('Enregistrer') }}</button>
+    </div>
+
+{{ form_end(form) }}
+ 

@@ -1,0 +1,128 @@
+
+
+{% extends 'homebase.html.twig' %}
+
+{% block title %} PIAMFOD - Nos Services {% endblock %}
+{% block keywords %} restaurants,bars,pizzeria {% endblock %}
+{% block description %} You will find our entire reservation Menu {% endblock %}
+
+
+
+{% block body %}
+
+    <div class="container-xxl py-5 bg-dark hero-header mb-5">
+                <div class="container text-center my-5 pt-5 pb-4">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Nos Services</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item"><a href="/">Accueil</a></li>
+                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Nos Services</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+         <!-- Service Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
+                                <h5>Maitres Chefs</h5>
+                                <p>Toujours à Votre Service grâce aux plats remarquables mis sur pieds</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-utensils text-primary mb-4"></i>
+                                <h5>Repas de Qualité</h5>
+                                <p>Toujours à Votre Service grâce aux plats remarquables mis sur pieds</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-cart-plus text-primary mb-4"></i>
+                                <h5>Commande en Ligne</h5>
+                                <p>Nous mettons en place le service en ligne pour le plus grand bien de nos clients </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="service-item rounded pt-3">
+                            <div class="p-4">
+                                <i class="fa fa-3x fa-headset text-primary mb-4"></i>
+                                <h5>Service 24H/7J </h5>
+                                <p>Un service adéquat pour toujours vous satisfaire</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+        
+
+           <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-9">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">PIAMFOOD</h4>
+                        <a class="btn btn-link" href="{{ path('apropos') }}">A Propos de Nous</a>
+                        <a class="btn btn-link" href="">Nous Contacer</a>
+                        <a class="btn btn-link" href="">Reserver une Table</a>
+                        <a class="btn btn-link" href="">Politique de Confidentialité</a>
+                        <a class="btn btn-link" href="">Terms & Conditions</a>
+                    </div>
+                    <div class="col-lg-3 col-md-9">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Rue, Lomé, Togo</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+228 12345678</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>piamfood@gmail.com.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-9">
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Ouvertures</h4>
+                        <h5 class="text-light fw-normal">Lundi - Samedi</h5>
+                        <p>09H - 24HH</p>
+                        <h5 class="text-light fw-normal">Dimanche</h5>
+                        <p>10H - 24H</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="/">PIAMF0OD</a>, Tous Droits reservés. 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+		
+{% endblock %}
